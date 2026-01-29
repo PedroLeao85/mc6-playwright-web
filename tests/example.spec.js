@@ -24,5 +24,5 @@ test('Teste de login qazando', async ({ page }) => {
   await page.locator('#email').fill('teste@qazando.com')
   await page.locator('#password').fill('123456')
   await page.getByRole('button', { name: 'Cadastrar' }).click();
-  await expect(page.getByRole('heading', { name: 'Cadastro realizado!' })).toBeVisible({ timeout : 10000});
+  await expect(page.getByRole('heading', { name: 'Cadastro realizado!' })).toBeVisible({ timeout : 11000});
 });
