@@ -19,3 +19,13 @@ test ('Login com senha <5 caracteres' , async ({page}) => {
     await expect(loginPage.errorMessageSenha).toBeVisible
 })
 
+test ('Login com email inválido' , async ({page}) => {
+    const loginPage = new LoginPage(page)
+
+    await loginPage.goto();
+    await loginPage.fillUsername('teste');
+    await loginPage.fillPassword('123456');
+    await loginPage.clickLogin();
+    await expect(loginPage.errorMessageEmail).toBeVisible
+})
+
