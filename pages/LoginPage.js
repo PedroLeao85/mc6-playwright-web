@@ -8,7 +8,7 @@ export class LoginPage {
     this.registerButton = page.getByRole('button', { name: 'login' });
     this.successMessage = page.getByRole('heading', { name: 'Login realizado' });
     this.errorMessageSenha = page.getByText('Senha inválida.')
-    this.errorMessageUsuario = page.getByText('E-mail inválido.')
+    this.errorMessageEmail = page.getByText('E-mail inválido.')
 
   }
 
